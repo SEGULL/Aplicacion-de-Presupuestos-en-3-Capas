@@ -10,6 +10,7 @@ public class Cajaregistradora extends BaseEntity implements Serializable{
 	
 	private String nombrecajaregistradora;
 	private Double preciocajaregistradora;
+	
 	public String getNombrecajaregistradora() {
 		return nombrecajaregistradora;
 	}
@@ -22,4 +23,5 @@ public class Cajaregistradora extends BaseEntity implements Serializable{
 	public void setPreciocajaregistradora(Double preciocajaregistradora) {
 		this.preciocajaregistradora = preciocajaregistradora;
 	}
+	
 }

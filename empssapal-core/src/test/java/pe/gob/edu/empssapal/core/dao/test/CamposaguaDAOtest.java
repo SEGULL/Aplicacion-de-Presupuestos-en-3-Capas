@@ -11,7 +11,8 @@ public class CamposaguaDAOtest extends AbstractUnitTest{
 
 	public void testEspecificacionList() {
 		
-		System.out.println("::::: " + camposaguaDAO.excavacionlist());
-	
+		System.out.println("::::: " + camposaguaDAO.Listarempalme());
+//	System.out.println("::::::::::" + camposaguaDAO.FindIdCajamedidor(1).getNombrecajamedidor());
 	}
 }
+

@@ -46,6 +46,7 @@
 	<mvc:default-servlet-handler />
 
 
-<!-- 	<bean class="org.springframework.web.servlet.view.XmlViewResolver" -->
-<!-- 		p:location="/WEB-INF/jasper-views.xml" p:order="0" /> -->
+	<bean class="org.springframework.web.servlet.view.XmlViewResolver"
+		p:location="/WEB-INF/jasper-views.xml" p:order="0" />
+
 </beans>

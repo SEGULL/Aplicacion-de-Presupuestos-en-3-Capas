@@ -25,13 +25,21 @@
 		<sec:intercept-url pattern="/css*" access="IS_AUTHENTICATED_ANONYMOUSLY,IS_AUTHENTICATED_REMEMBERED"/>
 		<sec:intercept-url pattern="/js*" access="IS_AUTHENTICATED_ANONYMOUSLY,IS_AUTHENTICATED_REMEMBERED"/>
 		<sec:intercept-url pattern="/home/**" access="IS_AUTHENTICATED_REMEMBERED"/>
-		<sec:intercept-url pattern="/docente/**" access="IS_AUTHENTICATED_REMEMBERED"/>
-		<sec:intercept-url pattern="/item/**" access="IS_AUTHENTICATED_REMEMBERED"/>
-		<sec:intercept-url pattern="/resolucion/**" access="IS_AUTHENTICATED_REMEMBERED"/>
-		<sec:intercept-url pattern="/detalle/**" access="IS_AUTHENTICATED_REMEMBERED"/>
-		<sec:intercept-url pattern="/itemresol/**" access="IS_AUTHENTICATED_REMEMBERED"/>
-		<sec:intercept-url pattern="/resolemitida/**" access="IS_AUTHENTICATED_REMEMBERED"/>
+		<sec:intercept-url pattern="/Cajamedidor/**" access="IS_AUTHENTICATED_REMEMBERED"/>
+		<sec:intercept-url pattern="/CajaRegistradora/**" access="IS_AUTHENTICATED_REMEMBERED"/>
+		<sec:intercept-url pattern="/Camaapoyo/**" access="IS_AUTHENTICATED_REMEMBERED"/>
+		<sec:intercept-url pattern="/Eliminacionmaterialexedente/**" access="IS_AUTHENTICATED_REMEMBERED"/>
+		<sec:intercept-url pattern="/Empalmealared/**" access="IS_AUTHENTICATED_REMEMBERED"/>
+		<sec:intercept-url pattern="/Excavacion/**" access="IS_AUTHENTICATED_REMEMBERED"/>
+		<sec:intercept-url pattern="/Pruebahidrahulica/**" access="IS_AUTHENTICATED_REMEMBERED"/>
+		<sec:intercept-url pattern="/Relleno/**" access="IS_AUTHENTICATED_REMEMBERED"/>
+		<sec:intercept-url pattern="/Reposicion/**" access="IS_AUTHENTICATED_REMEMBERED"/>
+		<sec:intercept-url pattern="/Rotura/**" access="IS_AUTHENTICATED_REMEMBERED"/>
+		<sec:intercept-url pattern="/Tendido/**" access="IS_AUTHENTICATED_REMEMBERED"/>
+		<sec:intercept-url pattern="/Vereda/**" access="IS_AUTHENTICATED_REMEMBERED"/>
 		
+		<sec:intercept-url pattern="/FormularioAgua/**" access="IS_AUTHENTICATED_REMEMBERED"/>
+		<sec:intercept-url pattern="/FormularioAlcantarillado/**" access="IS_AUTHENTICATED_REMEMBERED"/>
 
 		
 <!--		<sec:intercept-url pattern="/tournament/**" access="IS_AUTHENTICATED_REMEMBERED"/>-->
@@ -61,4 +69,6 @@
 	<bean id="authenticaionEntryPoint" class="org.springframework.security.web.authentication.LoginUrlAuthenticationEntryPoint">
 		<property name="loginFormUrl" value="/login" />
 	</bean>
+	
+	
 </beans>

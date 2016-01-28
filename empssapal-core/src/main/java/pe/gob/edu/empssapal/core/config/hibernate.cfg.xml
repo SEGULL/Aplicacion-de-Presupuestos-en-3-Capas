@@ -7,6 +7,7 @@
 		
 		
 	<mapping resource="pe/gob/edu/empssapal/core/domain/Cajamedidor.hbm.xml" />
+	<mapping resource="pe/gob/edu/empssapal/core/domain/Cajaregistradora.hbm.xml" />
 	<mapping resource="pe/gob/edu/empssapal/core/domain/Camaapoyo.hbm.xml" />
 	<mapping resource="pe/gob/edu/empssapal/core/domain/Camposagua.hbm.xml" />
 	<mapping resource="pe/gob/edu/empssapal/core/domain/Diametroagua.hbm.xml" />

@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 14-01-2016 a las 18:07:17
+-- Tiempo de generación: 28-01-2016 a las 21:09:21
 -- Versión del servidor: 5.6.21
 -- Versión de PHP: 5.6.3
 
@@ -30,7 +30,17 @@ CREATE TABLE IF NOT EXISTS `cajamedidor` (
 `IdCajaMedidor` int(11) NOT NULL,
   `NombreCajamedidor` varchar(15) NOT NULL,
   `PrecioCajaMedidor` double NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `cajamedidor`
+--
+
+INSERT INTO `cajamedidor` (`IdCajaMedidor`, `NombreCajamedidor`, `PrecioCajaMedidor`) VALUES
+(1, '15', 136.25),
+(2, '20', 158.92),
+(3, '25', 203.31),
+(4, '38', 347.71);
 
 -- --------------------------------------------------------
 
@@ -42,7 +52,16 @@ CREATE TABLE IF NOT EXISTS `cajaregistradora` (
 `IdCajaRegistradora` int(11) NOT NULL,
   `NombreCajaregistradora` varchar(15) NOT NULL,
   `PrecioCajaRegistradora` double NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `cajaregistradora`
+--
+
+INSERT INTO `cajaregistradora` (`IdCajaRegistradora`, `NombreCajaregistradora`, `PrecioCajaRegistradora`) VALUES
+(1, '6', 109.85),
+(2, '160', 109.85),
+(3, '200', 109.85);
 
 -- --------------------------------------------------------
 
@@ -54,7 +73,15 @@ CREATE TABLE IF NOT EXISTS `camaapoyo` (
 `IdCama` int(11) NOT NULL,
   `ServicioCama` varchar(15) NOT NULL,
   `PrecioCama` double NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `camaapoyo`
+--
+
+INSERT INTO `camaapoyo` (`IdCama`, `ServicioCama`, `PrecioCama`) VALUES
+(1, 'Agua', 3.92),
+(2, 'Alcantarillado', 9.42);
 
 -- --------------------------------------------------------
 
@@ -112,7 +139,17 @@ CREATE TABLE IF NOT EXISTS `diametroagua` (
   `IdCajaMedidor` int(11) NOT NULL,
   `IdTendido` int(11) NOT NULL,
   `CostoDiametro` double NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `diametroagua`
+--
+
+INSERT INTO `diametroagua` (`IdDiametroAgua`, `NombreDiametro`, `IdCajaMedidor`, `IdTendido`, `CostoDiametro`) VALUES
+(1, '15', 1, 1, 137.73),
+(2, '20', 2, 2, 160.73),
+(3, '25', 3, 3, 205.56),
+(4, '38', 4, 4, 352.12);
 
 -- --------------------------------------------------------
 
@@ -126,7 +163,16 @@ CREATE TABLE IF NOT EXISTS `diametroalcantarillado` (
   `CostoDiametro` double NOT NULL,
   `IdTendido` int(11) NOT NULL,
   `IdCajaRegistradora` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `diametroalcantarillado`
+--
+
+INSERT INTO `diametroalcantarillado` (`IdDiametroAlcantarillado`, `NombreDiametro`, `CostoDiametro`, `IdTendido`, `IdCajaRegistradora`) VALUES
+(1, '6', 123.66, 5, 1),
+(2, '160', 127.59, 6, 2),
+(3, '200', 141.32, 7, 3);
 
 -- --------------------------------------------------------
 
@@ -138,7 +184,15 @@ CREATE TABLE IF NOT EXISTS `eliminacionexedente` (
 `IdEliminacion` int(11) NOT NULL,
   `TipoServicioEliminacion` varchar(15) NOT NULL,
   `CostoEliminacion` double NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `eliminacionexedente`
+--
+
+INSERT INTO `eliminacionexedente` (`IdEliminacion`, `TipoServicioEliminacion`, `CostoEliminacion`) VALUES
+(1, 'Agua', 27.31),
+(2, 'Alcantarillado', 27.31);
 
 -- --------------------------------------------------------
 
@@ -152,7 +206,31 @@ CREATE TABLE IF NOT EXISTS `empalmered` (
   `TipoEmpalme` varchar(15) NOT NULL,
   `TipoServicioEmpalme` varchar(15) NOT NULL,
   `PrecioEmpalme` double NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `empalmered`
+--
+
+INSERT INTO `empalmered` (`IdEmpalmeRed`, `NombreDiametro`, `TipoEmpalme`, `TipoServicioEmpalme`, `PrecioEmpalme`) VALUES
+(1, '15', '63', 'Agua', 37.31),
+(2, '15', '90', 'Agua', 40.54),
+(3, '15', '110', 'Agua', 45.54),
+(4, '20', '63', 'Agua', 49.31),
+(5, '20', '90', 'Agua', 55.31),
+(6, '20', '110', 'Agua', 53.66),
+(7, '25', '63', 'Agua', 58.31),
+(8, '25', '90', 'Agua', 60.06),
+(9, '25', '110', 'Agua', 63.36),
+(10, '38', '90', 'Agua', 92.21),
+(11, '38', '110', 'Agua', 83.38),
+(12, '6', '8', 'Alcantarillado', 16.39),
+(13, '6', '10', 'Alcantarillado', 16.39),
+(14, '160', '200', 'Alcantarillado', 57.13),
+(15, '160', '250', 'Alcantarillado', 67.13),
+(16, '160', '315', 'Alcantarillado', 67.13),
+(17, '200', '250', 'Alcantarillado', 67.13),
+(18, '200', '315', 'Alcantarillado', 67.13);
 
 -- --------------------------------------------------------
 
@@ -164,7 +242,15 @@ CREATE TABLE IF NOT EXISTS `excavacion` (
 `IdEscavacion` int(11) NOT NULL,
   `ServicicioExcavacion` varchar(15) NOT NULL,
   `PrecioExcavacion` double NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `excavacion`
+--
+
+INSERT INTO `excavacion` (`IdEscavacion`, `ServicicioExcavacion`, `PrecioExcavacion`) VALUES
+(1, 'Agua', 24.39),
+(2, 'alcantarillado', 30.49);
 
 -- --------------------------------------------------------
 
@@ -176,7 +262,15 @@ CREATE TABLE IF NOT EXISTS `pruebahidraulica` (
 `IdPruebaHidraulica` int(11) NOT NULL,
   `NombreServicioPrueba` varchar(15) NOT NULL,
   `CostoPrueba` double NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `pruebahidraulica`
+--
+
+INSERT INTO `pruebahidraulica` (`IdPruebaHidraulica`, `NombreServicioPrueba`, `CostoPrueba`) VALUES
+(1, 'Agua', 1.7),
+(2, 'Alcantarillado', 3.06);
 
 -- --------------------------------------------------------
 
@@ -188,7 +282,15 @@ CREATE TABLE IF NOT EXISTS `relleno` (
 `IdRelleno` int(11) NOT NULL,
   `TipoServicioRelleno` varchar(15) NOT NULL,
   `CostoRelleno` double NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `relleno`
+--
+
+INSERT INTO `relleno` (`IdRelleno`, `TipoServicioRelleno`, `CostoRelleno`) VALUES
+(1, 'Agua', 20.89),
+(2, 'Alcantarillado', 28.82);
 
 -- --------------------------------------------------------
 
@@ -251,7 +353,20 @@ CREATE TABLE IF NOT EXISTS `tendido` (
   `NombreTendido` varchar(15) NOT NULL,
   `TipoServicioTendido` varchar(15) NOT NULL,
   `CostoTendido` double NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `tendido`
+--
+
+INSERT INTO `tendido` (`IdTendido`, `NombreTendido`, `TipoServicioTendido`, `CostoTendido`) VALUES
+(1, '15', 'Agua', 1.48),
+(2, '20', 'Agua', 1.81),
+(3, '25', 'Agua', 2.25),
+(4, '38', 'Agua', 4.41),
+(5, '6', 'Alcantarillado', 13.81),
+(6, '160', 'Alcantarillado', 17.74),
+(7, '200', 'Alcantarillado', 31.47);
 
 -- --------------------------------------------------------
 
@@ -266,7 +381,19 @@ CREATE TABLE IF NOT EXISTS `tipopista` (
   `NombrePista` varchar(15) NOT NULL,
   `TipoServicioPista` varchar(15) NOT NULL,
   `CostoPista` double NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `tipopista`
+--
+
+INSERT INTO `tipopista` (`IdPista`, `IdRotura`, `IdReposicion`, `NombrePista`, `TipoServicioPista`, `CostoPista`) VALUES
+(1, 1, 1, 'Tierra', 'Agua', 0),
+(2, 2, 2, 'Asfalto', 'Agua', 70.48),
+(3, 3, 3, 'Concreto', 'Agua', 80.32),
+(4, 4, 4, 'Tierra', 'Alcantarillado', 0),
+(5, 5, 5, 'Asfalto', 'Alcantarillado', 77.85),
+(6, 6, 6, 'Concreto', 'Alcantarillado', 79.27);
 
 -- --------------------------------------------------------
 
@@ -283,6 +410,18 @@ CREATE TABLE IF NOT EXISTS `total` (
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `total2`
+--
+
+CREATE TABLE IF NOT EXISTS `total2` (
+`IdTotal2` int(11) NOT NULL,
+  `IdCamposAlcantarillado` int(11) NOT NULL,
+  `CostoTotal2` double NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `vereda`
 --
 
@@ -291,7 +430,17 @@ CREATE TABLE IF NOT EXISTS `vereda` (
   `NombreVere` varchar(10) NOT NULL,
   `TipoServicioVere` varchar(15) NOT NULL,
   `CostoVere` double NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `vereda`
+--
+
+INSERT INTO `vereda` (`IdVereda`, `NombreVere`, `TipoServicioVere`, `CostoVere`) VALUES
+(1, 'Sin vereda', 'Agua', 0),
+(2, 'Con vereda', 'Agua', 16.92),
+(3, 'Sin vereda', 'Alcantarillado', 0),
+(4, 'Con vereda', 'Alcantarillado', 28.01);
 
 --
 -- Índices para tablas volcadas
@@ -325,7 +474,7 @@ ALTER TABLE `camposagua`
 -- Indices de la tabla `camposalcantarillado`
 --
 ALTER TABLE `camposalcantarillado`
- ADD PRIMARY KEY (`IdCamposAlcantarillado`), ADD KEY `camaapoyo_camposalcantarillado_fk` (`IdCama`), ADD KEY `excavacion_camposalcantarillado_fk` (`IdEscavacion`), ADD KEY `pruebahidraulica_camposalcantarillado_fk` (`IdPruebaHidraulica`), ADD KEY `eliminacionexedente_camposalcantarillado_fk` (`IdEliminacion`), ADD KEY `relleno_camposalcantarillado_fk` (`IdRelleno`), ADD KEY `empalmered_camposalcantarillado_fk` (`IdEmpalmeRed`), ADD KEY `tipopista_camposalcantarillado_fk` (`IdPista`), ADD KEY `vereda_camposalcantarillado_fk` (`IdVereda`), ADD KEY `diametroalcantarillado_camposalcantarillado_fk` (`IdDiametroAlcantarillado`);
+ ADD PRIMARY KEY (`IdCamposAlcantarillado`), ADD KEY `camaapoyo_camposalcantarillado_fk` (`IdCama`) USING BTREE, ADD KEY `excavacion_camposalcantarillado_fk` (`IdEscavacion`) USING BTREE, ADD KEY `pruebahidraulica_camposalcantarillado_fk` (`IdPruebaHidraulica`) USING BTREE, ADD KEY `eliminacionexedente_camposalcantarillado_fk` (`IdEliminacion`) USING BTREE, ADD KEY `relleno_camposalcantarillado_fk` (`IdRelleno`) USING BTREE, ADD KEY `empalmered_camposalcantarillado_fk` (`IdEmpalmeRed`) USING BTREE, ADD KEY `tipopista_camposalcantarillado_fk` (`IdPista`) USING BTREE, ADD KEY `vereda_camposalcantarillado_fk` (`IdVereda`) USING BTREE, ADD KEY `diametroalcantarillado_camposalcantarillado_fk` (`IdDiametroAlcantarillado`) USING BTREE;
 
 --
 -- Indices de la tabla `diametroagua`
@@ -400,6 +549,12 @@ ALTER TABLE `total`
  ADD PRIMARY KEY (`IdTotal`), ADD KEY `camposagua_total_fk` (`IdCampos`) USING BTREE;
 
 --
+-- Indices de la tabla `total2`
+--
+ALTER TABLE `total2`
+ ADD PRIMARY KEY (`IdTotal2`);
+
+--
 -- Indices de la tabla `vereda`
 --
 ALTER TABLE `vereda`
@@ -413,17 +568,17 @@ ALTER TABLE `vereda`
 -- AUTO_INCREMENT de la tabla `cajamedidor`
 --
 ALTER TABLE `cajamedidor`
-MODIFY `IdCajaMedidor` int(11) NOT NULL AUTO_INCREMENT;
+MODIFY `IdCajaMedidor` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT de la tabla `cajaregistradora`
 --
 ALTER TABLE `cajaregistradora`
-MODIFY `IdCajaRegistradora` int(11) NOT NULL AUTO_INCREMENT;
+MODIFY `IdCajaRegistradora` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT de la tabla `camaapoyo`
 --
 ALTER TABLE `camaapoyo`
-MODIFY `IdCama` int(11) NOT NULL AUTO_INCREMENT;
+MODIFY `IdCama` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT de la tabla `camposagua`
 --
@@ -438,37 +593,37 @@ MODIFY `IdCamposAlcantarillado` int(11) NOT NULL AUTO_INCREMENT;
 -- AUTO_INCREMENT de la tabla `diametroagua`
 --
 ALTER TABLE `diametroagua`
-MODIFY `IdDiametroAgua` int(11) NOT NULL AUTO_INCREMENT;
+MODIFY `IdDiametroAgua` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT de la tabla `diametroalcantarillado`
 --
 ALTER TABLE `diametroalcantarillado`
-MODIFY `IdDiametroAlcantarillado` int(11) NOT NULL AUTO_INCREMENT;
+MODIFY `IdDiametroAlcantarillado` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT de la tabla `eliminacionexedente`
 --
 ALTER TABLE `eliminacionexedente`
-MODIFY `IdEliminacion` int(11) NOT NULL AUTO_INCREMENT;
+MODIFY `IdEliminacion` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT de la tabla `empalmered`
 --
 ALTER TABLE `empalmered`
-MODIFY `IdEmpalmeRed` int(11) NOT NULL AUTO_INCREMENT;
+MODIFY `IdEmpalmeRed` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=19;
 --
 -- AUTO_INCREMENT de la tabla `excavacion`
 --
 ALTER TABLE `excavacion`
-MODIFY `IdEscavacion` int(11) NOT NULL AUTO_INCREMENT;
+MODIFY `IdEscavacion` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT de la tabla `pruebahidraulica`
 --
 ALTER TABLE `pruebahidraulica`
-MODIFY `IdPruebaHidraulica` int(11) NOT NULL AUTO_INCREMENT;
+MODIFY `IdPruebaHidraulica` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT de la tabla `relleno`
 --
 ALTER TABLE `relleno`
-MODIFY `IdRelleno` int(11) NOT NULL AUTO_INCREMENT;
+MODIFY `IdRelleno` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT de la tabla `reposicion`
 --
@@ -483,39 +638,30 @@ MODIFY `IdRotura` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=7;
 -- AUTO_INCREMENT de la tabla `tendido`
 --
 ALTER TABLE `tendido`
-MODIFY `IdTendido` int(11) NOT NULL AUTO_INCREMENT;
+MODIFY `IdTendido` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=8;
 --
 -- AUTO_INCREMENT de la tabla `tipopista`
 --
 ALTER TABLE `tipopista`
-MODIFY `IdPista` int(11) NOT NULL AUTO_INCREMENT;
+MODIFY `IdPista` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=7;
 --
 -- AUTO_INCREMENT de la tabla `total`
 --
 ALTER TABLE `total`
 MODIFY `IdTotal` int(11) NOT NULL AUTO_INCREMENT;
 --
+-- AUTO_INCREMENT de la tabla `total2`
+--
+ALTER TABLE `total2`
+MODIFY `IdTotal2` int(11) NOT NULL AUTO_INCREMENT;
+--
 -- AUTO_INCREMENT de la tabla `vereda`
 --
 ALTER TABLE `vereda`
-MODIFY `IdVereda` int(11) NOT NULL AUTO_INCREMENT;
+MODIFY `IdVereda` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
 --
 -- Restricciones para tablas volcadas
 --
-
---
--- Filtros para la tabla `camposalcantarillado`
---
-ALTER TABLE `camposalcantarillado`
-ADD CONSTRAINT `camaapoyo_camposalcantarillado_fk` FOREIGN KEY (`IdCama`) REFERENCES `camaapoyo` (`IdCama`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-ADD CONSTRAINT `diametroalcantarillado_camposalcantarillado_fk` FOREIGN KEY (`IdDiametroAlcantarillado`) REFERENCES `diametroalcantarillado` (`IdDiametroAlcantarillado`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-ADD CONSTRAINT `eliminacionexedente_camposalcantarillado_fk` FOREIGN KEY (`IdEliminacion`) REFERENCES `eliminacionexedente` (`IdEliminacion`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-ADD CONSTRAINT `empalmered_camposalcantarillado_fk` FOREIGN KEY (`IdEmpalmeRed`) REFERENCES `empalmered` (`IdEmpalmeRed`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-ADD CONSTRAINT `excavacion_camposalcantarillado_fk` FOREIGN KEY (`IdEscavacion`) REFERENCES `excavacion` (`IdEscavacion`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-ADD CONSTRAINT `pruebahidraulica_camposalcantarillado_fk` FOREIGN KEY (`IdPruebaHidraulica`) REFERENCES `pruebahidraulica` (`IdPruebaHidraulica`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-ADD CONSTRAINT `relleno_camposalcantarillado_fk` FOREIGN KEY (`IdRelleno`) REFERENCES `relleno` (`IdRelleno`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-ADD CONSTRAINT `tipopista_camposalcantarillado_fk` FOREIGN KEY (`IdPista`) REFERENCES `tipopista` (`IdPista`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-ADD CONSTRAINT `vereda_camposalcantarillado_fk` FOREIGN KEY (`IdVereda`) REFERENCES `vereda` (`IdVereda`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 --
 -- Filtros para la tabla `diametroagua`

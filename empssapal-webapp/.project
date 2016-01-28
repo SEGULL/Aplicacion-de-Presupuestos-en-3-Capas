@@ -3,6 +3,7 @@
 	<name>empssapal-webapp</name>
 	<comment></comment>
 	<projects>
+		<project>empssapal-core</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>
