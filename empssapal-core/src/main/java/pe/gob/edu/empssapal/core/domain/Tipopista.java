@@ -8,7 +8,7 @@ public class Tipopista extends BaseEntity implements Serializable{
 	
 	private String nombrepista;
 	private String tiposerviciopista;
-	private Double 	Costopista;
+	private Double Costopista;
 	private Rotura rotura;
 	private Reposicion reposicion;
 	

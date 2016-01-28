@@ -5,7 +5,7 @@
 <hibernate-mapping>
     <class name="pe.gob.edu.empssapal.core.domain.Tipopista" table="tipopista" >
         <id name="id" type="java.lang.Long">
-            <column name="IdCampos" />
+            <column name="IdPista" />
             <generator class="identity" />
         </id>
 

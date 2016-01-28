@@ -10,8 +10,8 @@
 
 	<!-- Scans the classpath of this application for @Components to deploy as 
 		beans -->
-	<context:component-scan base-package="pe.gob.edu.ugel.resoluciones.webapp.controller" />
-	<context:component-scan base-package="pe.gob.edu.ugel.resoluciones.webapp.security" />
+	<context:component-scan base-package="pe.gob.edu.empssapal.webapp.controller" />
+	<context:component-scan base-package="pe.gob.edu.empssapal.webapp.security" />
 	<!-- Configures the @Controller programming model -->
 	<mvc:annotation-driven />
 
@@ -46,6 +46,7 @@
 	<mvc:default-servlet-handler />
 
 
-<!-- 	<bean class="org.springframework.web.servlet.view.XmlViewResolver" -->
-<!-- 		p:location="/WEB-INF/jasper-views.xml" p:order="0" /> -->
+	<bean class="org.springframework.web.servlet.view.XmlViewResolver"
+		p:location="/WEB-INF/jasper-views.xml" p:order="0" />
+
 </beans>

@@ -11,7 +11,6 @@ public class Camposagua extends BaseEntity implements Serializable{
 	private String interesado;
 	private Date fecha;
 	private Double distancia;
-	
 	private Vereda vereda;
 	private Tipopista pista;
 	private Diametroagua diametroagua;
@@ -31,8 +30,8 @@ public class Camposagua extends BaseEntity implements Serializable{
 	public Date getFecha() {
 		return fecha;
 	}
-	public void setFecha(Date fecha) {
-		this.fecha = fecha;
+	public void setFecha(java.util.Date date) {
+		this.fecha = (Date) date;
 	}
 	public Double getDistancia() {
 		return distancia;

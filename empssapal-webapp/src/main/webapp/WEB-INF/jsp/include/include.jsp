@@ -4,11 +4,8 @@
 
 	<link href="<%=request.getContextPath()%>/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
   <link href="<%=request.getContextPath()%>/bootstrap/fonts/css/font-awesome.css" rel="stylesheet" type="text/css"/>
-  <link href="<%=request.getContextPath()%>/bootstrap/css/datatables.css" rel="stylesheet" type="text/css"/>
   <script src="<%=request.getContextPath()%>/bootstrap/js/jquery-1.11.1.min.js"></script>
-<%--   <script src="<%=request.getContextPath()%>/bootstrap/js/jspdf.min.js"></script> --%>
 	<script src="<%=request.getContextPath()%>/bootstrap/js/bootstrap.min.js"></script>
-	<script src="<%=request.getContextPath()%>/bootstrap/js/datatables.js"></script>
   <script src="<%=request.getContextPath()%>/bootstrap/js/login.js"></script>
 
 

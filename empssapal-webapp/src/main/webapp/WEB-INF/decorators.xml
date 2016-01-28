@@ -1,13 +1,21 @@
 <decorators defaultdir="/decorator"> 
     <decorator name="general" page="general.jsp"> 
         <pattern>/home/*</pattern>
-        <pattern>/docente/*</pattern>
-        <pattern>/item/*</pattern>
-        <pattern>/resolucion/*</pattern>
-         <pattern>/detalle/*</pattern>
-          <pattern>/itemresol/*</pattern>
-           <pattern>/resolemitida/*</pattern>
+        <pattern>/Cajamedidor/*</pattern>
+        <pattern>/CajaRegistradora/*</pattern>
+        <pattern>/Camaapoyo/*</pattern>
+         <pattern>/Eliminacionmaterialexedente/*</pattern>
+          <pattern>/Empalmealared/*</pattern>
+           <pattern>/Excavacion/*</pattern>
+           <pattern>/Pruebahidrahulica/*</pattern>
+           <pattern>/Relleno/*</pattern>
+           <pattern>/Reposicion/*</pattern>
+           <pattern>/Rotura/*</pattern>
+           <pattern>/Tendido/*</pattern>
+           <pattern>/Vereda/*</pattern>
         
+           <pattern>/FormularioAgua/*</pattern>
+           <pattern>/FormularioAlcantarillado/*</pattern>
         
     </decorator>
 

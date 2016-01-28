@@ -1,65 +1,71 @@
 <%@ include file="/WEB-INF/jsp/include/taglibs.jsp"%>
 <c:set var="authentication" value="${sessionScope['SPRING_SECURITY_CONTEXT'].authentication}" />
 <c:set var="user" value="${authentication.details}" />
-	<div class="navbar navbar-fixed-top" role="navigation">
-<nav class="navbar  navbar-inverse navbar-default">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="<%=request.getContextPath()%>/home/dashboard.html">Resoluciones</a>
+	<div class="navbar navbar-fixed-top" role="navigation" >
+<nav class="navbar  navbar-inverse navbar-default"  >
+  <div class="container-fluid" >
+  
+  <div class="navbar-header">
+      <a class="navbar-brand" href="<%=request.getContextPath()%>/home/dashboard.html">SISTEMA DE PRESUPUESTOS</a>
     </div>
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-        <li <c:if test="${menuHeader eq 'docente'}"> class="active"</c:if>><a href="<%=request.getContextPath() %>/docente/dashboard.html"><i class="fa fa-users"></i> Docentes</a></li>
-        <li <c:if test="${menuHeader eq 'item'}"> class="active"</c:if>><a href="<%=request.getContextPath() %>/item/dashboard.html"><i class="fa fa-indent"></i> Item</a></li>
-        <li <c:if test="${menuHeader eq 'resolucion'}"> class="active"</c:if>><a href="<%=request.getContextPath() %>/resolucion/dashboard.html"><i class="fa fa-file-text"></i> Resolucion</a></li>
-<%--         <li <c:if test="${menuHeader eq 'detalle'}"> class="active"</c:if>><a href="<%=request.getContextPath() %>/detalle/dashboard.html"><i class="fa fa-file-text"></i> Detalle</a></li> --%>
-<%--         <li <c:if test="${menuHeader eq 'itemresol'}"> class="active"</c:if>><a href="<%=request.getContextPath() %>/itemresol/dashboard.html"><i class="fa fa-file-text"></i> Item - Resol.</a></li> --%>
-        <li <c:if test="${menuHeader eq 'resolemitida'}"> class="active"</c:if>><a href="<%=request.getContextPath() %>/resolemitida/dashboard.html"><i class="fa fa-file-text"></i> Resol. - Emitida</a></li>
-        
-<%--            <c:forEach items="${user.roles}" var="item"> --%>
-<%--              <c:if test="${item eq 'ROLE_ADMIN'}"> --%>
-<%--                <li <c:if test="${menuHeader eq 'institution'}"> class="active"</c:if>><a href="<%=request.getContextPath() %>/institution/dashboard.html">Institución</a></li> --%>
-<%--              </c:if> --%>
-<%--            </c:forEach>               --%>
-<%--            <c:forEach items="${user.roles}" var="item"> --%>
-<%--              <c:if test="${item eq 'ROLE_USER'}"> --%>
-<%--                <li <c:if test="${menuHeader eq 'elections'}"> class="active"</c:if>><a href="<%=request.getContextPath() %>/elections/dashboard.html">Elecciones</a></li> --%>
-<%--              </c:if> --%>
-<%--            </c:forEach>               --%>
-<%--            <c:forEach items="${user.roles}" var="item"> --%>
-<%--              <c:if test="${item eq 'ROLE_CLIENT'}"> --%>
-<%--                <li <c:if test="${menuHeader eq 'voto'}"> class="active"</c:if>><a href="<%=request.getContextPath() %>/voto/dashboard.html">Voto Electronico</a></li>   --%>
-<%--              </c:if> --%>
-<%--            </c:forEach> --%>
-      
-
-      </ul>
-
-      
- 			<div class="col-sm-3 col-md-3 ">
-		<form class="navbar-form" role="search">
-		<div class="input-group">
-			<input type="text" class="form-control" placeholder="Search" name="srch-term" id="srch-term">
-			<div class="input-group-btn">
-				<button class="btn btn-success" type="submit"><i class="fa fa-search"></i></button>
-			</div>
-		</div>
-		</form>
-		</div>
-      <ul class="nav navbar-nav navbar-right">
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1"  >
+	<ul class="nav navbar-nav">
        
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-          	${user.userName}
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Mantenimiento Precios
            <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="#">Configucion</a></li>
+        <li <c:if test="${menuHeader eq 'CajaRegistradora'}"> class="active"</c:if>><a href="<%=request.getContextPath() %>/CajaRegistradora/dashboard.html"><i class="fa fa-indent"></i> Caja Registradora</a></li>
+        <li <c:if test="${menuHeader eq 'Cajamedidor'}"> class="active"</c:if>><a href="<%=request.getContextPath() %>/Cajamedidor/dashboard.html"><i class="fa fa-indent"></i> Caja medidor</a></li>
+        <li <c:if test="${menuHeader eq 'CajaRegistradora'}"> class="active"</c:if>><a href="<%=request.getContextPath() %>/CajaRegistradora/dashboard.html"><i class="fa fa-indent"></i> Caja Registradora</a></li>
+        <li <c:if test="${menuHeader eq 'Camaapoyo'}"> class="active"</c:if>><a href="<%=request.getContextPath() %>/Camaapoyo/dashboard.html"><i class="fa fa-indent"></i> Cama apoyo</a></li>
+        <li <c:if test="${menuHeader eq 'Eliminacionmaterialexedente'}"> class="active"</c:if>><a href="<%=request.getContextPath() %>/Eliminacionmaterialexedente/dashboard.html"><i class="fa fa-indent"></i> Eliminacion exedente</a></li>
+        <li <c:if test="${menuHeader eq 'Empalmealared'}"> class="active"</c:if>><a href="<%=request.getContextPath() %>/Empalmealared/dashboard.html"><i class="fa fa-indent"></i> Empalme de red</a></li>
+        <li <c:if test="${menuHeader eq 'Excavacion'}"> class="active"</c:if>><a href="<%=request.getContextPath() %>/Excavacion/dashboard.html"><i class="fa fa-indent"></i> Excavacion</a></li>
+        <li <c:if test="${menuHeader eq 'Pruebahidrahulica'}"> class="active"</c:if>><a href="<%=request.getContextPath() %>/Pruebahidrahulica/dashboard.html"><i class="fa fa-indent"></i> Pruebas</a></li>
+        <li <c:if test="${menuHeader eq 'Relleno'}"> class="active"</c:if>><a href="<%=request.getContextPath() %>/Relleno/dashboard.html"><i class="fa fa-indent"></i> Relleno</a></li>
+        <li <c:if test="${menuHeader eq 'Reposicion'}"> class="active"</c:if>><a href="<%=request.getContextPath() %>/Reposicion/dashboard.html"><i class="fa fa-indent"></i> Reposicion</a></li>
+        <li <c:if test="${menuHeader eq 'Rotura'}"> class="active"</c:if>><a href="<%=request.getContextPath() %>/Rotura/dashboard.html"><i class="fa fa-indent"></i> Rotura</a></li>
+        <li <c:if test="${menuHeader eq 'Vereda'}"> class="active"</c:if>><a href="<%=request.getContextPath() %>/Vereda/dashboard.html"><i class="fa fa-indent"></i> Vereda</a></li>
+           
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Presupuesto de instalacion de agua
+           <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+       			<li <c:if test="${menuHeader eq 'FormularioAgua'}"> class="active"</c:if>><a href="<%=request.getContextPath() %>/FormularioAgua/dashboard15.html"><i class="fa fa-indent"></i> Instalacion de 15</a></li>
+       			<li <c:if test="${menuHeader eq 'FormularioAgua'}"> class="active"</c:if>><a href="<%=request.getContextPath() %>/FormularioAgua/dashboard20.html"><i class="fa fa-indent"></i> Instalacion de 20</a></li>
+       			<li <c:if test="${menuHeader eq 'FormularioAgua'}"> class="active"</c:if>><a href="<%=request.getContextPath() %>/FormularioAgua/dashboard25.html"><i class="fa fa-indent"></i> Instalacion de 25</a></li>
+       			<li <c:if test="${menuHeader eq 'FormularioAgua'}"> class="active"</c:if>><a href="<%=request.getContextPath() %>/FormularioAgua/dashboard38.html"><i class="fa fa-indent"></i> Instalacion de 38</a></li>
+       			<li <c:if test="${menuHeader eq 'FormularioAgua'}"> class="active"</c:if>><a href="<%=request.getContextPath() %>/FormularioAgua/Menu.html"><i class="fa fa-indent"></i> Menu</a></li>
+       			<li <c:if test="${menuHeader eq 'FormularioAgua'}"> class="active"</c:if>><a href="<%=request.getContextPath() %>/FormularioAgua/Reporte.html"><i class="fa fa-indent"></i> Reporte</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Presupuesto de instalacion de alcantarillado
+           <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+       			<li <c:if test="${menuHeader eq 'FormularioAlcantarillado'}"> class="active"</c:if>><a href="<%=request.getContextPath() %>/FormularioAlcantarillado/dashboard6.html"><i class="fa fa-indent"></i> Instalacion de 6</a></li>
+       			<li <c:if test="${menuHeader eq 'FormularioAlcantarillado'}"> class="active"</c:if>><a href="<%=request.getContextPath() %>/FormularioAlcantarillado/dashboard160.html"><i class="fa fa-indent"></i> Instalacion de 160</a></li>
+       			<li <c:if test="${menuHeader eq 'FormularioAlcantarillado'}"> class="active"</c:if>><a href="<%=request.getContextPath() %>/FormularioAlcantarillado/dashboard200.html"><i class="fa fa-indent"></i> Instalacion de 200</a></li>
+           </ul>
+        </li>
+      </ul>
+
+     <ul class="nav navbar-nav navbar-right">
+       
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Administrador
+           <span class="caret"></span></a>
+          <ul class="dropdown-menu">
             <li role="separator" class="divider"></li>
-            <li><a href="<%=request.getContextPath()%>/logout"><i class="fa fa-sign-out pull-right"></i> Log Out</a>
+            <li><a href="<%=request.getContextPath()%>/logout"><i class="fa fa-sign-out pull-right"></i> Cerrar Seccion</a>
            
           </ul>
         </li>
       </ul>
+      
     </div>
   </div>
 </nav>
